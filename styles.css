@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    max-width: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-left {
+  display: flex;
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  top: 20px;
+}
+
+.nav-logo {
+  position: relative;
+  top: 3px;
+}
+
+.nav-logo-text {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.nav-center {
+  position: relative;
+  top: 20px;
+  background: #f6f6f6;
+  border: none;
+  border-radius: 10px;
+  width: 487px;
+  height: 44px;
+  padding-left: 40px;
+  
+}
+
+.nav-center > input {
+  border: none;
+  background: none;
+  outline: none;
+  margin-left: 10px;
+  width: 80%;
+  height: 20px;
+  font-size: 15px;
+}
+
+.nav-center > input,
+i {
+  position: relative;
+  top: 12px;
+}
+
+.nav-right {
+  display: flex;
+  position: relative;
+  top: 30px;
+}
+
+.categories-dropdown {
+  width: 200px;
+  z-index: 1;
+  border: 1px solid #a4a4a4;
+  position: relative;
+  top: 80px;
+  transition: 0.3s;
+}
+
+.categories-dropdown > a {
+  color: rgba(52, 64, 84, 1);
+  padding: 8px 8px 8px 8px;
+  margin: 10px;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.categories-dropdown > a:hover{
+    background-color: rgba(249, 250, 251, 1);
+}
+
+/*.categories-dropdown.active {
+    visibility: visible;
+}*/
+
+.nav-right > h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  left: 20px;
+}
+
+.nav-right > .fa-angle-down {
+    position: relative;
+    top: 4px;
+    left: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-right > .fa-user {
+    position: relative;
+    top: 4px;
+    left: 90px;
+} 
+
+.cart-container {
+    position: relative;
+    /*top: -5px;*/
+    right: -130px;
+}
+
+.cart-container > .cart-counter {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(229, 194, 0, 1);
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.carousel-conatainer {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+}
