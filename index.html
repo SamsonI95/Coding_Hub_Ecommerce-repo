@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="assets/Vector.svg" />
+    <title>okaymart ecommerce site</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <div class="nav-logo">
+            <img src="assets/Vector.svg" alt="oakymart-icon" />
+          </div>
+          <div class="nav-logo-text">OKAYMART</div>
+        </div>
+        <div class="nav-center">
+          <i class="fa-solid fa-magnifying-glass" style="color: #07090e"></i>
+          <input
+            type="search"
+            name="search-bar"
+            id="searchBar"
+            placeholder="Search for anything"
+          />
+        </div>
+        <div class="nav-right">
+          <h3>Categories</h3>
+          <i
+            class="fa-solid fa-angle-down"
+            style="color: #07090e"
+            onclick="toggleDropdown()"
+          ></i>
+          <i class="fa-regular fa-user"></i>
+          <div class="cart-container">
+            <img src="assets/cart.svg" alt="cart-icon" />
+            <span class="cart-counter">0</span>
+          </div>
+        </div>
+        <div class="categories-dropdown">
+          <a href="#">Fashion</a>
+          <a href="#">Gadgets</a>
+          <a href="#">Beauty</a>
+          <a href="#">Sporting Goods</a>
+          <a href="#">Electronics</a>
+          <a href="#">Supermarket</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="slider">
+            <section class="content">
+              <img
+                src="assets/shop-hero-1-product-slide-1.svg"
+                alt="furniture"
+              />
+              <div class="content-text">
+                <h3>EXPLORE LIMITLESS FURNITURE</h3>
+                <p>
+                  Discover premium finds with a swipe! Explore curated
+                  collections of fashion, tech, and more.
+                </p>
+              </div>
+              <button>SHOP NOW</button>
+            </section>
+            <section class="content">
+              <img
+                src="assets/shop-hero-1-product-slide-1.svg"
+                alt="furniture"
+              />
+              <div class="content-text">
+                <h3>EXPLORE LIMITLESS FURNITURE</h3>
+                <p>
+                  Discover premium finds with a swipe! Explore curated
+                  collections of fashion, tech, and more.
+                </p>
+              </div>
+              <button>SHOP NOW</button>
+            </section>
+            <section class="content">
+              <img
+                src="assets/shop-hero-1-product-slide-1.svg"
+                alt="furniture"
+              />
+              <div class="content-text">
+                <h3>EXPLORE LIMITLESS FURNITURE</h3>
+                <p>
+                  Discover premium finds with a swipe! Explore curated
+                  collections of fashion, tech, and more.
+                </p>
+              </div>
+              <button>SHOP NOW</button>
+            </section>
+          </div>
+          <div class="carousel-controls">
+            <span class="arrow left"
+              ><i class="fa-solid fa-chevron-left"></i
+            ></span>
+            <span class="arrow right"
+              ><i class="fa-solid fa-chevron-right"></i
+            ></span>
+            <ul>
+              <li class="selected"></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

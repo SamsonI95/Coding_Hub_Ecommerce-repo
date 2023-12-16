@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  max-width: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-left {
+  display: flex;
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  top: 20px;
+  left: -12%;
+}
+
+.nav-logo {
+  position: relative;
+  top: 3px;
+}
+
+.nav-logo-text {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.nav-center {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  background: #f6f6f6;
+  border: none;
+  border-radius: 10px;
+  width: 487px;
+  height: 44px;
+  padding-left: 40px;
+}
+
+.nav-center > input {
+  border: none;
+  background: none;
+  outline: none;
+  margin-left: 10px;
+  width: 80%;
+  height: 20px;
+  font-size: 15px;
+}
+
+.nav-center > input,
+i {
+  position: relative;
+  top: 12px;
+}
+
+.nav-right {
+  display: flex;
+  position: relative;
+  top: 30px;
+  right: -12%;
+}
+
+.categories-dropdown {
+  width: 200px;
+  z-index: 1;
+  border: 1px solid #a4a4a4;
+  position: relative;
+  top: 70px;
+  right: 30px;
+  transition: 0.3s;
+  background: #fff;
+  display: ; /* Initially hidden */
+}
+
+.categories-dropdown.active {
+  display: block; /* Show when active */
+}
+
+.categories-dropdown > a {
+  color: rgba(52, 64, 84, 1);
+  padding: 8px 8px 8px 8px;
+  margin: 10px;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.categories-dropdown > a:hover {
+  background-color: rgba(249, 250, 251, 1);
+}
+
+/*.categories-dropdown.active {
+    visibility: visible;
+}*/
+
+.nav-right > h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  left: 20px;
+}
+
+.nav-right > .fa-angle-down {
+  position: relative;
+  top: 4px;
+  left: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-right > .fa-user {
+  position: relative;
+  top: 4px;
+  left: 90px;
+}
+
+.cart-container {
+  position: relative;
+  /*top: -5px;*/
+  right: -130px;
+}
+
+.cart-container > .cart-counter {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(229, 194, 0, 1);
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.slider {
+  height: 100%;
+  display: flex;
+  transition: all 0.5s;
+}
+
+.carousel-container {
+  position: absolute;
+  width: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  top: 15%;
+  visibility: hidden;
+}
+
+.carousel-container .content-text {
+  position: absolute;
+  top: 45%;
+  left: 250px;
+  color: white;
+}
+
+.carousel-container .content-text > h3 {
+  font-family: Playfair Display;
+  font-size: 58px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px; /* 137.931% */
+  letter-spacing: 0.2px;
+}
+
+.carousel-container .content-text > p {
+  position: relative;
+  left: 36%;
+  width: 626px;
+  text-align: right;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  letter-spacing: 0.2px;
+}
+
+.carousel-container button {
+  display: flex;
+  padding: 15px 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #fff;
+  color: rgba(229, 194, 0, 1);
+  position: absolute;
+  top: 70%;
+  left: 83%;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.carousel-container button:hover {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.carousel-controls .arrow {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+.carousel-controls .arrow i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: -5px;
+}
+
+.carousel-controls ul {
+  display: flex;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
+  list-style: none;
+}
+
+.carousel-controls ul li {
+  width: 63px;
+  height: 10px;
+  background: grey;
+  opacity: 0.2;
+  margin: 0.5px;
+  cursor: pointer;
+}
+
+.carousel-controls ul li.selected {
+  background: white;
+  opacity: 8;
+}
