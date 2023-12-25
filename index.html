@@ -37,6 +37,7 @@
           <i
             class="fa-solid fa-angle-down"
             style="color: #07090e"
+            id="myArrow"
             onclick="toggleDropdown()"
           ></i>
           <i class="fa-regular fa-user"></i>
@@ -45,7 +46,7 @@
             <span class="cart-counter">0</span>
           </div>
         </div>
-        <div class="categories-dropdown">
+        <div class="categories-dropdown" id="myDropdown">
           <a href="#">Fashion</a>
           <a href="#">Gadgets</a>
           <a href="#">Beauty</a>
@@ -57,65 +58,77 @@
     </header>
     <main>
       <div class="carousel-container">
-        <div class="carousel">
-          <div class="slider">
-            <section class="content">
-              <img
-                src="assets/shop-hero-1-product-slide-1.svg"
-                alt="furniture"
-              />
-              <div class="content-text">
-                <h3>EXPLORE LIMITLESS FURNITURE</h3>
-                <p>
-                  Discover premium finds with a swipe! Explore curated
-                  collections of fashion, tech, and more.
-                </p>
-              </div>
-              <button>SHOP NOW</button>
-            </section>
-            <section class="content">
-              <img
-                src="assets/shop-hero-1-product-slide-1.svg"
-                alt="furniture"
-              />
-              <div class="content-text">
-                <h3>EXPLORE LIMITLESS FURNITURE</h3>
-                <p>
-                  Discover premium finds with a swipe! Explore curated
-                  collections of fashion, tech, and more.
-                </p>
-              </div>
-              <button>SHOP NOW</button>
-            </section>
-            <section class="content">
-              <img
-                src="assets/shop-hero-1-product-slide-1.svg"
-                alt="furniture"
-              />
-              <div class="content-text">
-                <h3>EXPLORE LIMITLESS FURNITURE</h3>
-                <p>
-                  Discover premium finds with a swipe! Explore curated
-                  collections of fashion, tech, and more.
-                </p>
-              </div>
-              <button>SHOP NOW</button>
-            </section>
+        <div class="slider">
+          <div class="mySlides fade">
+            <img src="assets/shop-hero-1-product-slide-1.svg" />
+            <div class="content-text">
+              <h3>EXPLORE LIMITLESS FURNITURE</h3>
+              <p>
+                Discover premium finds with a swipe! Explore curated collections
+                of fashion, tech, and more.
+              </p>
+            </div>
+            <button>SHOP NOW</button>
           </div>
-          <div class="carousel-controls">
-            <span class="arrow left"
-              ><i class="fa-solid fa-chevron-left"></i
-            ></span>
-            <span class="arrow right"
-              ><i class="fa-solid fa-chevron-right"></i
-            ></span>
-            <ul>
-              <li class="selected"></li>
-              <li></li>
-              <li></li>
-            </ul>
+          <div class="mySlides fade">
+            <img src="assets/shop-hero-1-product-slide-1.svg" />
+          </div>
+          <div class="mySlides fade">
+            <img src="assets/shop-hero-1-product-slide-1.svg" />
           </div>
         </div>
+        <div class="carousel-controls">
+          <span class="arrow left"
+            ><i class="fa-solid fa-chevron-left"></i
+          ></span>
+          <span class="arrow right"
+            ><i class="fa-solid fa-chevron-right"></i
+          ></span>
+          <ul>
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="category-title">Explore by Category</div>
+      <div class="category-options">
+        <section>
+          <div class="category-options-text">
+            <h3>FASHION</h3>
+            <p>See more</p>
+            <i class="fa-solid fa-arrow-right" style="color: #07090e"></i>
+          </div>
+          <img class="image-left" src="assets/fashion1.svg" alt="fashion" />
+        </section>
+        <section>
+          <div class="category-options-text">
+            <h3>GADGETS</h3>
+            <p>See more</p>
+            <i class="fa-solid fa-arrow-right" style="color: #07090e"></i>
+          </div>
+          <img class="image-right" src="assets/gadgets.svg" alt="Gadgets" />
+        </section>
+        <section>
+          <div class="category-options-text">
+            <h3>FURNITURE</h3>
+            <p>See more</p>
+            <i class="fa-solid fa-arrow-right" style="color: #07090e"></i>
+          </div>
+          <img
+            class="image-bottom"
+            src="assets/furniture.svg"
+            alt="furniture"
+          />
+        </section>
+        <section>
+          <div class="category-options-text">
+            <h3>BEAUTY</h3>
+            <p>See more</p>
+            <i class="fa-solid fa-arrow-right" style="color: #07090e"></i>
+          </div>
+          <img class="image-bottom" src="assets/beauty.svg" alt="beauty" />
+        </section>
       </div>
     </main>
     <footer></footer>
