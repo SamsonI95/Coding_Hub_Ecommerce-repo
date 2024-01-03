@@ -141,6 +141,10 @@ nav {
   z-index: 2;
 }
 
+main {
+  overflow: hidden;
+}
+
 .carousel-container img {
   vertical-align: middle;
 }
@@ -367,12 +371,10 @@ nav {
 }
 
 .product-tab-wrapper {
-  display: flex;
+  display: block;
   padding: 30px;
-}
-
-.left-panel {
-  width: 100%;
+  transform: translateX(5%);
+  overflow: hidden;
 }
 
 .left-panel-nav-bar {
@@ -381,6 +383,10 @@ nav {
   width: 838px;
   position: relative;
   left: 30px;
+}
+
+.left-panel-nav-bar a.highlighted {
+  color: #e5c200;
 }
 
 .left-panel-nav-bar h3 {
@@ -419,11 +425,6 @@ nav {
   cursor: pointer;
 }
 
-.left-panel-carousel-container {
-  position: relative;
-  margin: auto;
-}
-
 .nav-rect {
   width: 728px;
   height: 2px;
@@ -432,17 +433,64 @@ nav {
   left: 30px;
 }
 
+.left-panel-carousel-container {
+  width: 52%;
+  margin: 10px auto;
+  float: left;
+}
+
+.left-panel-carousel {
+  /*border: 1px solid red;*/
+  height: 800px;
+  overflow: hidden;
+}
+
 .item-carousel-container-slider {
+  display: flex;
+  height: 100%;
+  width: 100%;
   transition: all 0.5s;
 }
 
-.gadget-item-container,
-.fashion-item-container {
+.item-carousel-container-slider section {
+  flex-basis: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
   position: relative;
   top: 50px;
+  /*transform: translateX(-5%);
+  padding: 0 15rem;*/
+  gap: 5px;
+  row-gap: 10px;
+}
+
+.right-panel-carousel-container {
+  position: absolute;
+  width: 50%;
+  margin: 10px auto;
+  left: 60%;
+  transform: translateY(-30px);
+  
+}
+
+.right-panel-carousel {
+  /*border: 1px solid red;*/
+  height: 800px;
+  width: 56%;
+  overflow: hidden;
+}
+
+.right-item-carousel-container-slider {
+  display: flex;
+  height: 100%;
+  width: 130%;
+  transition: all 0.5s;
+  
+}
+
+.right-item-carousel-container-slider section {
+  flex-basis: 100%;
+  
 }
 
 .box {
@@ -484,4 +532,71 @@ nav {
   line-height: 24px; /* 150% */
   letter-spacing: 0.1px;
   margin-bottom: 5px;
+}
+
+.footer {
+  position: absolute;
+  bottom: -450%;
+  height: 309px;
+  width: 100%;
+  padding: 0 195px;
+  display: flex;
+  background-color: #e5c200;
+  justify-content: space-evenly;
+}
+
+.footer section {
+  padding: 80px 0;
+}
+
+.footer section h3 {
+  color: var(--White, #fff);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: 0.1px;
+  margin-bottom: 25px;
+}
+
+.footer section p {
+  color: var(--White, #fff);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.2px;
+  width: 209px;
+  margin-top: 25px;
+}
+
+.social-icons {
+  margin-top: 25px;
+  color: #fff;
+  transform: translateX(-6px);
+}
+
+.social-icons i {
+  margin-left: 10px;
+}
+
+.footer section ul {
+  list-style-type: none;
+}
+
+.footer section ul li {
+  margin-bottom: 8px;
+}
+
+.footer section a {
+  text-decoration: none;
+  color: var(--White, #fff);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: 0.2px;
 }
