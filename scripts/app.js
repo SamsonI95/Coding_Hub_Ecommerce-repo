@@ -69,11 +69,12 @@ rightArrow.addEventListener("click", function () {
   slider.style.transform = "translate(" + sectionIndex * -100 + "%)";
 });
 
-
 //Product card carousel controller
 
 const cardSlider = document.querySelector(".item-carousel-container-slider");
-const rightCardSlider = document.querySelector(".right-item-carousel-container-slider");
+const rightCardSlider = document.querySelector(
+  ".right-item-carousel-container-slider"
+);
 const cardLeftArrow = document.querySelector(".circle-arrow-left");
 const cardRightArrow = document.querySelector(".circle-arrow-right");
 const focusedIndicators = document.querySelector(".left-panel-nav-bar");
@@ -83,30 +84,40 @@ var rightCardSectionIndex = 0;
 
 // Product card carousel focused controller
 
-document.querySelectorAll(".left-panel-nav-bar a").forEach(function (highlited, hgl) {
-  highlited.addEventListener("click", function () {
-    cardSectionIndex = hgl;
-    document.querySelector(".left-panel-nav-bar .highlighted").classList.remove("highlighted");
-    highlited.classList.add("higlighted");
-    cardSlider.style.transform = "translate(" + cardSectionIndex * -100 + "%)"
-  })
-
-})
+document
+  .querySelectorAll(".left-panel-nav-bar a")
+  .forEach(function (highlited, hgl) {
+    highlited.addEventListener("click", function () {
+      cardSectionIndex = hgl;
+      document
+        .querySelector(".left-panel-nav-bar .highlighted")
+        .classList.remove("highlighted");
+      highlited.classList.add("higlighted");
+      cardSlider.style.transform =
+        "translate(" + cardSectionIndex * -100 + "%)";
+    });
+  });
 
 // Product card carousel arrows controller
 
-cardLeftArrow.addEventListener('click', function () {
+cardLeftArrow.addEventListener("click", function () {
   cardSectionIndex = cardSectionIndex > 0 ? cardSectionIndex - 1 : 0;
-  document.querySelector(".left-panel-nav-bar .highlighted").classList.remove("highlighted");
+  document
+    .querySelector(".left-panel-nav-bar .highlighted")
+    .classList.remove("highlighted");
   focusedIndicators.children[cardSectionIndex].classList.add("highlighted");
-  cardSlider.style.transform = "translate(" + cardSectionIndex * -100 + "%)"
-  rightCardSlider.style.transform = "translate(" + cardSectionIndex * -100 + "%)"
-})
+  cardSlider.style.transform = "translate(" + cardSectionIndex * -100 + "%)";
+  rightCardSlider.style.transform =
+    "translate(" + cardSectionIndex * -100 + "%)";
+});
 
-cardRightArrow.addEventListener('click', function () {
+cardRightArrow.addEventListener("click", function () {
   cardSectionIndex = cardSectionIndex < 1 ? cardSectionIndex + 1 : 1;
-  document.querySelector(".left-panel-nav-bar .highlighted").classList.remove("highlighted");
+  document
+    .querySelector(".left-panel-nav-bar .highlighted")
+    .classList.remove("highlighted");
   focusedIndicators.children[cardSectionIndex].classList.add("highlighted");
-  cardSlider.style.transform = "translate(" + cardSectionIndex * -100 + "%)"
-  rightCardSlider.style.transform = "translate(" + cardSectionIndex * -100 + "%)"
-})
+  cardSlider.style.transform = "translate(" + cardSectionIndex * -100 + "%)";
+  rightCardSlider.style.transform =
+    "translate(" + cardSectionIndex * -100 + "%)";
+});

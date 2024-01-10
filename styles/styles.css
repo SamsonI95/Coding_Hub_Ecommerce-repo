@@ -12,133 +12,7 @@ header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
-}
-
-nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.nav-left {
-  display: flex;
-  position: relative;
-  left: -90px;
-}
-
-.nav-logo-text {
-  font-family: Oswald;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  text-transform: capitalize;
-}
-
-.nav-center {
-  display: flex;
-  align-items: center;
-  position: relative;
-  left: -10px;
-  background: #f6f6f6;
-  border: none;
-  border-radius: 10px;
-  width: 487px;
-  height: 44px;
-  padding-left: 40px;
-}
-
-.nav-center > input {
-  border: none;
-  background: none;
-  outline: none;
-  margin-left: 10px;
-  width: 80%;
-  height: 20px;
-  font-size: 15px;
-}
-
-.nav-right {
-  display: flex;
-  align-items: center;
-}
-
-.nav-right h3 {
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.nav-right i {
-  position: relative;
-  align-items: center;
-  top: 2px;
-  left: 10px;
-  cursor: pointer;
-}
-
-.nav-right .fa-user {
-  position: relative;
-  top: 0;
-  left: 32px;
-}
-
-.fa-angle-down.flipped {
-  transform: rotate(180deg);
-}
-
-.nav-right .cart-container {
-  position: relative;
-  left: 64px;
-}
-
-.cart-container .cart-counter {
-  display: flex;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: rgba(229, 194, 0, 1);
-  justify-content: center;
-  align-items: center;
-  color: rgba(255, 255, 255, 1);
-  position: absolute;
-  top: -10px;
-  right: -10px;
-}
-
-.categories-dropdown {
-  display: none;
-  position: absolute;
-  width: 250px;
-  top: 90px;
-  right: 10%;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-}
-
-.categories-dropdown a {
-  display: block;
-  padding: 10px 16px;
-  text-decoration: none;
-  color: #333;
-  transition: background-color 0.3s;
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px; /* 142.857% */
-}
-
-.categories-dropdown > a:hover {
-  background-color: rgba(249, 250, 251, 1);
-}
-
-.categories-dropdown.show {
-  display: block;
-  z-index: 2;
+  height: 4rem;
 }
 
 main {
@@ -470,7 +344,6 @@ main {
   margin: 10px auto;
   left: 60%;
   transform: translateY(-30px);
-  
 }
 
 .right-panel-carousel {
@@ -485,12 +358,10 @@ main {
   height: 100%;
   width: 130%;
   transition: all 0.5s;
-  
 }
 
 .right-item-carousel-container-slider section {
   flex-basis: 100%;
-  
 }
 
 .box {

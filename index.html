@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -37,17 +38,26 @@
           />
         </div>
         <div class="nav-right">
-          <h3>Categories</h3>
-          <i
-            class="fa-solid fa-angle-down"
-            style="color: #07090e"
-            id="myArrow"
-            onclick="toggleDropdown()"
-          ></i>
+          <div class="categories-toggle">
+            <h3>Categories</h3>
+            <i
+              class="fa-solid fa-angle-down"
+              style="color: #07090e"
+              id="myArrow"
+              onclick="toggleDropdown()"
+            ></i>
+          </div>
+
+          <i class="fa-solid fa-magnifying-glass" style="color: #07090e"></i>
+
           <i class="fa-regular fa-user"></i>
+
           <div class="cart-container">
-            <img src="assets/cart.svg" alt="cart-icon" />
+            <i class="fa-solid fa-shopping-cart"></i>
             <span class="cart-counter">0</span>
+          </div>
+          <div class="hamburger" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars"></i>
           </div>
         </div>
         <div class="categories-dropdown" id="myDropdown">
@@ -57,6 +67,24 @@
           <a href="#">Sporting Goods</a>
           <a href="#">Electronics</a>
           <a href="#">Supermarket</a>
+        </div>
+
+   <div class="mobile-nav" id="mobileMenu">
+          <div>
+            <a href="#">
+              <p>Home</p>
+            </a>
+          </div>
+          <div>
+             <a href="#">
+               <p>Categories</p>
+             </a>
+          </div>
+          <div>
+            <a href="#">
+            <p>Contact Us</p>
+            </a>
+          </div>
         </div>
       </nav>
     </header>
@@ -290,6 +318,7 @@
         </section>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
