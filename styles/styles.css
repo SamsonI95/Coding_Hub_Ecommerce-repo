@@ -195,7 +195,7 @@ main {
 }
 
 .essentials-tag {
-  background: url(assets/essentials.png), lightgray 50% / cover no-repeat;
+  background: lightgray 50% / cover no-repeat;
   height: 500px;
   position: relative;
   vertical-align: middle;
