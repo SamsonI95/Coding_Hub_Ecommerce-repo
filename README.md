@@ -10,13 +10,13 @@ Any other documentation would be added as the project goes on.
 # Awesome Ecommerce Platform
 
 <p align="center">
-  <img src="your-logo-url" alt="Your Logo" width="200" height="200"/>
+  <img src="https://correction-liard.vercel.app/assets/images/Vector.svg" alt="Your Logo" width="200" height="200"/>
 </p>
 
 Welcome to the Awesome Ecommerce Platform! 🚀
 
-[![GitHub license](your-license-badge-url)](your-license-url)
-[![GitHub issues](your-issues-badge-url)](your-issues-url)
+[![GitHub license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/emmzyrayz/OKAYINTERRUPT-branch?label=Open%20Issues)](https://github.com/SamsonI95/Coding_Hub_Ecommerce-repo/issues)
 
 ---
 
