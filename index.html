@@ -1,325 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="./styles/navbar.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-thin-straight/css/uicons-thin-straight.css"
-    />
-    <link rel="icon" href="assets/Vector.svg" />
-    <title>okaymart ecommerce site</title>
-  </head>
-  <body>
-    <header>
-      <nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css"/>
+  <link rel="icon" href="assets/Vector.svg"/>
+  <title>okaymart ecommerce site</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a class="link" href="/">
         <div class="nav-left">
           <div class="nav-logo">
-            <img src="assets/Vector.svg" alt="oakymart-icon" />
+            <img src="assets/images/Vector.svg" alt="okaymart-icon" />
           </div>
           <div class="nav-logo-text">OKAYMART</div>
         </div>
-        <div class="nav-center">
-          <i class="fa-solid fa-magnifying-glass" style="color: #07090e"></i>
-          <input
-            type="search"
-            name="search-bar"
-            id="searchBar"
-            placeholder="Search for anything"
-          />
-        </div>
-        <div class="nav-right">
-          <div class="categories-toggle">
-            <h3>Categories</h3>
-            <i
-              class="fa-solid fa-angle-down"
-              style="color: #07090e"
-              id="myArrow"
-              onclick="toggleDropdown()"
-            ></i>
-          </div>
-
-          <i class="fa-solid fa-magnifying-glass" style="color: #07090e"></i>
-
-          <i class="fa-regular fa-user"></i>
-
-          <div class="cart-container">
-            <i class="fa-solid fa-shopping-cart"></i>
-            <span class="cart-counter">0</span>
-          </div>
-          <div class="hamburger" onclick="toggleMobileMenu()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </div>
-        <div class="categories-dropdown" id="myDropdown">
-          <a href="#">Fashion</a>
-          <a href="#">Gadgets</a>
-          <a href="#">Beauty</a>
-          <a href="#">Sporting Goods</a>
-          <a href="#">Electronics</a>
-          <a href="#">Supermarket</a>
+      </a>
+      <div class="nav-center">
+        <i class="fa-solid fa-magnifying-glass" style="color: #07090e"></i>
+        <input type="search" name="search-bar" id="searchBar" placeholder="Search for anything..." />
+        <i class="fa-solid fa-xmark nav-cancel" id="cancelIcon" style="color:
+        #07090e"></i>
+      </div>
+      <div class="nav-right">
+        <div class="categories-toggle">
+          <h3>Categories</h3>
+          <i class="fa-solid fa-angle-down" style="color: #07090e" id="myArrow" onclick="toggleDropdown()"></i>
         </div>
 
-   <div class="mobile-nav" id="mobileMenu">
-          <div>
-            <a href="#">
-              <p>Home</p>
-            </a>
-          </div>
-          <div>
-             <a href="#">
-               <p>Categories</p>
-             </a>
-          </div>
-          <div>
-            <a href="#">
+        <i id="magnifyingGlassM" class="fa-solid fa-magnifying-glass" style="color: #07090e"></i>
+        
+        <div class="nav-mobile-search">
+          <i id="magnifyingGlass" class="fa-solid fa-magnifying-glass" style="color: #07090e"></i>
+          <input type="search" name="search-bar" id="searchBarM" placeholder="Search for anything..." />
+          <i class="fa-solid fa-xmark nav-cancel" id="cancelIconM" style="color: #07090e"></i>
+        </div>
+
+        <i class="fa-regular fa-user"></i>
+
+        <div class="cart-container">
+          <i class="fa-solid fa-shopping-cart"></i>
+          <span class="cart-counter">0</span>
+        </div>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="categories-dropdown" id="myDropdown">
+        <a href="#">Fashion</a>
+        <a href="#">Gadgets</a>
+        <a href="#">Beauty</a>
+        <a href="#">Sporting Goods</a>
+        <a href="#">Electronics</a>
+        <a href="#">Supermarket</a>
+      </div>
+
+      <div class="mobile-nav" id="mobileMenu">
+        <div>
+          <a href="#">
+            <p>Home</p>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <p>Categories</p>
+          </a>
+        </div>
+        <div>
+          <a href="#">
             <p>Contact Us</p>
-            </a>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <banner class="banner-container" id="bannerContainer">
+      <div class="banner-btn" id="bannerBtn">
+        <div id="bannerRightBtn" class="banner-right-btn">
+          <i  class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div id="bannerLeftBtn" class="banner-left-btn">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+  
+      <div class="banner-items" id="bannerItems">
+        <div class="banner-item active" id="bannerItem1">
+          <img src="assets/images/bag.jpg" alt="bag">
+        </div>
+        <div class="banner-item" id="bannerItem2">
+          <img src="assets/images/camera.png" alt="camera">
+        </div>
+        <div class="banner-item" id="bannerItem3">
+          <img src="assets/images/furniture.svg" alt="furniture">
+        </div>
+        <div class="banner-item" id="bannerItem4">
+          <img src="assets/images/essentials.png" alt="essentials">
+        </div>
+        <div class="banner-item" id="bannerItem5">
+          <img src="assets/images/gadget-card-cover-5.jpg" alt="headphones">
+        </div>
+      </div>
+  
+      <div class="banner-show-btns" id="bannerShowBtns"></div>
+    </banner>
+    <div class="carousel-container">
+      <div class="slider">
+        <div class="mySlides fade">
+          <img src="assets/images/shop-hero-1-product-slide-1.svg" />
+          <div class="content-text">
+            <h3>EXPLORE LIMITLESS FURNITURE</h3>
+            <p>
+              Discover premium finds with a swipe! Explore curated collections
+              of fashion, tech, and more.
+            </p>
+          </div>
+          <button>SHOP NOW</button>
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/images/shop-hero-1-product-slide-1.svg" />
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/images/shop-hero-1-product-slide-1.svg" />
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <span class="arrow left"><i class="fa-solid fa-chevron-left"></i></span>
+        <span class="arrow right"><i class="fa-solid fa-chevron-right"></i></span>
+        <ul>
+          <li class="selected"></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+    <div class="category-title">Explore by Category</div>
+    <div class="category-options">
+      <section class="image-left">
+        <div class="category-options-text">
+          <h3>FASHION</h3>
+          <p>See more</p>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <img src="assets/images/fashion1.svg" alt="fashion" style="height: 575px" />
+      </section>
+      <section class="image-right">
+        <div class="category-options-text">
+          <h3>GADGETS</h3>
+          <p>See more</p>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <img src="assets/images/gadgets.svg" alt="Gadgets" />
+      </section>
+      <section>
+        <div class="category-options-text">
+          <h3>FURNITURE</h3>
+          <p>See more</p>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <img class="image-bottom" src="assets/images/furniture.svg" alt="furniture" />
+      </section>
+      <section>
+        <div class="category-options-text">
+          <h3>BEAUTY</h3>
+          <p>See more</p>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+        <img class="image-bottom" src="assets/images/beauty.svg" alt="beauty" />
+      </section>
+    </div>
+    <div class="essentials-tag">
+      <h3>Essentials for your sweet traditions</h3>
+      <button>SHOP HOLIDAY ESSENTIALS</button>
+    </div>
+    <div class="product-tab-wrapper">
+      <div class="left-panel-nav-bar">
+        <h3>Our Bestsellers</h3>
+        <a href="#" class="highlighted">Gadgets</a>
+        <a href="#">Fashion</a>
+        <a href="#">Furniture</a>
+        <a href="#">Beauty</a>
+        <div class="nav-controls">
+          <span class="circle-arrow-left">
+            <i class="fi fi-ts-angle-circle-left""></i>
+              </span>
+              <span class=" circle-arrow-right">
+              <i class="fi fi-ts-angle-circle-right"></i>
+          </span>
+        </div>
+      </div>
+      <div class="nav-rect"></div>
+      <div class="left-panel-carousel-container">
+        <div class="left-panel-carousel">
+          <div class="item-carousel-container-slider">
+            <section>
+              <div class="box">
+                <img src="assets/images/camera.png" alt="camera">
+                <h3>Camera</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/smartwatch.png" alt="smartwatch">
+                <h3>Smartwatch</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/smartphone.png" alt="smartphone">
+                <h3>Smartphone</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/heaphones.png" alt="headphones">
+                <h3>Headphones</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/camera.png" alt="camera">
+                <h3>Camera</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/heaphones.png" alt="headphones">
+                <h3>Headphones</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+            </section>
+            <section>
+              <div class="box">
+                <img src="assets/images/bag.jpg" alt="bag" style="width: 183px; height: 162px;">
+                <h3>Bag</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/shoes.jpg" alt="shoe" style="width: 183px; height: 162px;">
+                <h3>Shoe</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/jacket.jpg" alt="jacket" style="width: 183px; height: 162px;">
+                <h3>Jacket</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/glasses.jpg" alt="glasses" style="width: 183px; height: 162px;">
+                <h3>Glasses</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/jeans.jpg" alt="jeans" style="width: 183px; height: 162px;">
+                <h3>Jeans</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+              <div class="box">
+                <img src="assets/images/shirt.jpg" alt="t-shirt" style="width: 183px; height: 162px;">
+                <h3>T-shirt</h3>
+                <p>English Department</p>
+                <h4>$16.48</h4>
+              </div>
+            </section>
+            <section></section>
+            <section></section>
           </div>
         </div>
-      </nav>
-    </header>
-    <main>
-      <div class="carousel-container">
-        <div class="slider">
-          <div class="mySlides fade">
-            <img src="assets/shop-hero-1-product-slide-1.svg" />
-            <div class="content-text">
-              <h3>EXPLORE LIMITLESS FURNITURE</h3>
-              <p>
-                Discover premium finds with a swipe! Explore curated collections
-                of fashion, tech, and more.
-              </p>
-            </div>
-            <button>SHOP NOW</button>
-          </div>
-          <div class="mySlides fade">
-            <img src="assets/shop-hero-1-product-slide-1.svg" />
-          </div>
-          <div class="mySlides fade">
-            <img src="assets/shop-hero-1-product-slide-1.svg" />
+      </div>
+      <div class="right-panel-carousel-container">
+        <div class="right-panel-carousel">
+          <div class="right-item-carousel-container-slider">
+            <section>
+              <img src="assets/images/gadget-card-cover-5.jpg" alt="gadgets">
+            </section>
+            <section>
+              <img src="assets/images/fashion-group.jpg" alt="fashion-group" style="width: 430px; height: 796px;">
+            </section>
           </div>
         </div>
-        <div class="carousel-controls">
-          <span class="arrow left"
-            ><i class="fa-solid fa-chevron-left"></i
-          ></span>
-          <span class="arrow right"
-            ><i class="fa-solid fa-chevron-right"></i
-          ></span>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <section>
+        <div class="section1">
+          <h3>Get In Touch</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="section2">
+          <h3>Categories</h3>
           <ul>
-            <li class="selected"></li>
-            <li></li>
-            <li></li>
+            <li><a href="#">Furniture</a></li>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Fashion</a></li>
+            <li><a href="#">Gadgets</a></li>
           </ul>
         </div>
-      </div>
-      <div class="category-title">Explore by Category</div>
-      <div class="category-options">
-        <section class="image-left">
-          <div class="category-options-text">
-            <h3>FASHION</h3>
-            <p>See more</p>
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <img src="assets/fashion1.svg" alt="fashion" style="height: 575px" />
-        </section>
-        <section class="image-right">
-          <div class="category-options-text">
-            <h3>GADGETS</h3>
-            <p>See more</p>
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <img src="assets/gadgets.svg" alt="Gadgets" />
-        </section>
-        <section>
-          <div class="category-options-text">
-            <h3>FURNITURE</h3>
-            <p>See more</p>
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <img
-            class="image-bottom"
-            src="assets/furniture.svg"
-            alt="furniture"
-          />
-        </section>
-        <section>
-          <div class="category-options-text">
-            <h3>BEAUTY</h3>
-            <p>See more</p>
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-          <img class="image-bottom" src="assets/beauty.svg" alt="beauty" />
-        </section>
-      </div>
-      <div class="essentials-tag">
-        <img src="assets/essentials.png" alt="christmas-tag">
-        <h3>Essentials for your sweet traditions</h3>
-        <button>SHOP HOLIDAY ESSENTIALS</button>
-      </div>
-      <div class="product-tab-wrapper">
-          <div class="left-panel-nav-bar">
-            <h3>Our Bestsellers</h3>
-            <a href="#" class="highlighted">Gadgets</a>
-            <a href="#">Fashion</a>
-            <a href="#">Furniture</a>
-            <a href="#">Beauty</a>
-            <div class="nav-controls">
-              <span class="circle-arrow-left">
-                <i class="fi fi-ts-angle-circle-left""></i>
-              </span>
-              <span class="circle-arrow-right">
-                <i class="fi fi-ts-angle-circle-right"></i>
-              </span>
-            </div>
-          </div>
-          <div class="nav-rect"></div>
-          <div class="left-panel-carousel-container">
-            <div class="left-panel-carousel">
-              <div class="item-carousel-container-slider">
-                <section>
-                  <div class="box">
-                    <img src="assets/camera.png" alt="camera">
-                    <h3>Camera</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/smartwatch.png" alt="smartwatch">
-                    <h3>Smartwatch</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/smartphone.png" alt="smartphone">
-                    <h3>Smartphone</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/heaphones.png" alt="headphones">
-                    <h3>Headphones</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/camera.png" alt="camera">
-                    <h3>Camera</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/heaphones.png" alt="headphones">
-                    <h3>Headphones</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                </section>
-                <section>
-                  <div class="box">
-                    <img src="assets/bag.jpg" alt="bag" style="width: 183px; height: 162px;">
-                    <h3>Bag</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/shoes.jpg" alt="shoe" style="width: 183px; height: 162px;">
-                    <h3>Shoe</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/jacket.jpg" alt="jacket" style="width: 183px; height: 162px;">
-                    <h3>Jacket</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/glasses.jpg" alt="glasses" style="width: 183px; height: 162px;">
-                    <h3>Glasses</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/jeans.jpg" alt="jeans" style="width: 183px; height: 162px;">
-                    <h3>Jeans</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                  <div class="box">
-                    <img src="assets/shirt.jpg" alt="t-shirt" style="width: 183px; height: 162px;">
-                    <h3>T-shirt</h3>
-                    <p>English Department</p>
-                    <h4>$16.48</h4>
-                  </div>
-                </section>
-                <section></section>
-                <section></section>
-              </div>
-            </div>
-          </div>
-          <div class="right-panel-carousel-container">
-            <div class="right-panel-carousel">
-              <div class="right-item-carousel-container-slider">
-                <section>
-                  <img src="assets/gadget-card-cover-5.jpg" alt="gadgets">
-                </section>
-                <section>
-                  <img src="assets/fashion-group.jpg" alt="fashion-group" style="width: 430px; height: 796px;">
-                </section>
-              </div>
-            </div>
+      </section>
+      <section>
+        <div class="section3">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Who we are</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Live Chat</a></li>
+            <li><a href="#">Unlimited Support</a></li>
+          </ul>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div class="footer">
-        <section>
-          <div class="section1">
-            <h3>Get In Touch</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-            <div class="social-icons">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-x-twitter"></i>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="section2">
-            <h3>Categories</h3>
-            <ul>
-              <li><a href="#">Furniture</a></li>
-              <li><a href="#">Beauty</a></li>
-              <li><a href="#">Fashion</a></li>
-              <li><a href="#">Gadgets</a></li>
-            </ul>
-          </div>
-        </section>
-        <section>
-          <div class="section3">
-            <h3>About Us</h3>
-            <ul>
-              <li><a href="#">Who we are</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Live Chat</a></li>
-              <li><a href="#">Unlimited Support</a></li>
-            </ul>
-          </div>
-        </section>
-      </div>
-    </footer>
-    <script src="./scripts/navbar.js"></script>
-    <script src="./scripts/app.js"></script>
-  </body>
+      </section>
+    </div>
+  </footer>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/app.js"></script>
+</body>
+
 </html>

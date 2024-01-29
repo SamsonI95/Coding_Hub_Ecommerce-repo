@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@700&family=Oswald:wght@600&display=swap");
+@import url(/assets/css/navbar.css);
+@import url(/assets/css/banner.css);
+@import url(https://cdn-uicons.flaticon.com/2.0.0/uicons-thin-straight/css/uicons-thin-straight.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
 
 * {
   padding: 0;
@@ -8,15 +12,23 @@
   box-sizing: border-box;
 }
 
+.link{
+  text-decoration: none;
+  color: inherit; 
+}
+
 header {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
-  height: 4rem;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  /* height: rem; */
 }
 
 main {
   overflow: hidden;
+  display: block;
 }
 
 .carousel-container img {
@@ -195,7 +207,7 @@ main {
 }
 
 .essentials-tag {
-  background: lightgray 50% / cover no-repeat;
+  background: url(assets/essentials.png), lightgray 50% / cover no-repeat;
   height: 500px;
   position: relative;
   vertical-align: middle;
@@ -406,12 +418,16 @@ main {
 }
 
 .footer {
-  position: absolute;
-  bottom: -450%;
-  height: 309px;
+  position: relative;
+  /* bottom: -450%; */
+  margin-bottom: -10px;
+  /* height: 309px; */
   width: 100%;
   padding: 0 195px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  flex: auto;
   background-color: #e5c200;
   justify-content: space-evenly;
 }
