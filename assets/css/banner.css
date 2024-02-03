@@ -40,12 +40,6 @@
   color: aliceblue;
 }
 
-.banner-right-btn i,
-.banner-left-btn i {
-  /* position: relative; */
-  /* align-items: center; */
-}
-
 .banner-right-btn:hover,
 .banner-left-btn:hover {
   opacity: 1;
