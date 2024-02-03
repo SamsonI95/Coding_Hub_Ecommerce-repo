@@ -1,0 +1,322 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 99;
+}
+
+.nav-left {
+  display: flex;
+  position: relative;
+}
+
+.nav-logo-text {
+  font-family: Oswald;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #f6f6f6;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  width: 487px;
+  height: 44px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-center::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, #f6f6f6, #fff);
+  z-index: -1;
+  border-radius: 10px; /* Add border-radius to match the main container */
+  transition: background 0.3s ease;
+}
+
+.nav-center:hover {
+  background-color: #f0f0f0;
+}
+
+.nav-center:hover::before {
+  background: linear-gradient(45deg, #e0e0e0, #f6f6f6);
+}
+
+.nav-center > input,
+.nav-right .nav-mobile-search > input {
+  border: none;
+  background: none;
+  outline: none;
+  margin-left: 10px;
+  width: 80%;
+  height: 20px;
+  font-size: 15px;
+}
+.nav-center input:focus::placeholder,
+.nav-right .nav-mobile-search input:focus::placeholder {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+/* Style the cancel button */
+input[type="search" i]:enabled:read-write:-webkit-any(
+    :focus,
+    :hover
+  )::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.nav-center .nav-cancel,
+.nav-right .nav-mobile-search .nav-cancel {
+  display: none;
+  border: none;
+  color: #07090e !important; /* Match the color of the magnifying glass icon */
+  font-size: 20px !important; /* Adjust the font size as needed */
+  cursor: pointer;
+  margin-left: 48px;
+  outline: none;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-right .categories-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  width: auto;
+}
+
+.nav-right .categories-toggle h3 {
+  display: block;
+  margin: 0;
+  padding: 0;
+  place-content: center !important;
+  width: 100%;
+  max-width: 90px;
+}
+
+.nav-right h3 {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.nav-right .fa-bars,
+.nav-right .fa-magnifying-glass,
+.nav-right .nav-mobile-search {
+  display: none;
+}
+
+.fa-angle-down.flipped {
+  transform: rotate(180deg);
+}
+
+.nav-right .cart-container {
+  position: relative;
+}
+
+.cart-container .cart-counter {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(229, 194, 0, 1);
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.categories-dropdown {
+  display: none;
+  position: absolute;
+  width: 250px;
+  top: 90px;
+  right: 10%;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+  transition: transform 0.3s linear;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
+
+/* Animaion classes */
+.slide-down-animation {
+  animation: slideDown 0.3s ease forwards;
+}
+
+.slide-up-animation {
+  animation: slideUp 0.3s ease forwards;
+}
+
+.categories-dropdown a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+
+.categories-dropdown > a:hover {
+  background-color: rgba(249, 250, 251, 1);
+}
+
+.categories-dropdown.show {
+  display: block;
+  z-index: 2;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-center,
+  .nav-right .categories-toggle,
+  .nav-right .fa-user {
+    display: none;
+  }
+
+  .nav-right .fa-bars,
+  .nav-right .fa-magnifying-glass {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-right .nav-mobile-search.active {
+    display: flex;
+  }
+
+  .nav-right #magnifyingGlassM.active {
+    display: none;
+  }
+
+  .nav-right .nav-mobile-search {
+    display: none;
+    align-items: center;
+    position: relative;
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    padding: 7px;
+    border-radius: 7px;
+    width: 100%;
+    min-width: 210px;
+    height: 28px;
+    transition: background-color 0.3s ease;
+  }
+
+  .nav-right .nav-mobile-search::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(45deg, #f6f6f6, #fff);
+    z-index: -1;
+    border-radius: 10px; /* Add border-radius to match the main container */
+    transition: background 0.3s ease;
+  }
+
+  .nav-right .nav-mobile-search > input{
+    font-size: 10px;
+  }
+
+  .nav-right .nav-mobile-search:hover {
+    background-color: #f0f0f0;
+  }
+  .nav-right .nav-mobile-search:hover::before {
+    background: linear-gradient(45deg, #e0e0e0, #f6f6f6);
+  }
+
+  #searchBar {
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  #searchBar.zoom-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 3rem;
+    z-index: 1;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    font-family: Inter;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-nav > div {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .mobile-nav > div > a {
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300;
+  }
+
+  .mobile-nav > div > a > p {
+    font-size: 1.5rem;
+  }
+}

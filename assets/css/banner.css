@@ -1,0 +1,115 @@
+/* CSS code */
+
+.banner-container {
+  /* width: 100%; */
+  display: block;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin: 1% 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .banner-container,
+  .banner-item img {
+    height: 50vh;
+  }
+}
+
+.banner-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  z-index: 5;
+}
+
+.banner-right-btn,
+.banner-left-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0.5;
+  border-radius: 10px;
+  transition: opacity 0.5s;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  color: aliceblue;
+}
+
+.banner-right-btn:hover,
+.banner-left-btn:hover {
+  opacity: 1;
+}
+
+.banner-btn.clicked .banner-right-btn,
+.banner-btn.clicked .banner-left-btn {
+  opacity: 1;
+}
+
+.banner-items {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.banner-item {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.banner-item img{
+  width: 100vw;
+  height: 100vh;
+  min-height: 500px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.banner-item.active {
+  opacity: 1;
+}
+
+.banner-show-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.banner-show-btn {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.banner-show-btn.active {
+  opacity: 1;
+}
