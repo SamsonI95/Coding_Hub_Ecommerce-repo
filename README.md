@@ -1,5 +1,5 @@
 # Site Deployment Link
-https://samsoni95.github.io/Coding_Hub_Ecommerce-repo/
+https://ecommerce-sites-woad.vercel.app/
 
 # Coding_Hub_Ecommerce-repo
 Documentation and code source for an ecommerce website
