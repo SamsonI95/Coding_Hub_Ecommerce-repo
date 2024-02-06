@@ -1,5 +1,5 @@
 # Site Deployment Link
-https://samsoni95.github.io/Coding_Hub_Ecommerce-repo/
+https://ecommerce-sites-woad.vercel.app/
 
 # Coding_Hub_Ecommerce-repo
 Documentation and code source for an ecommerce website
@@ -124,23 +124,25 @@ Follow these steps to set up and run the Awesome Ecommerce Platform on your loca
 
 ```bash
 # Clone the repository
-git clone your-repo-url
+git clone -b OKAYINTERRUPT-branch https://github.com/SamsonI95/Coding_Hub_Ecommerce-repo.git
 
 # Navigate to the project directory
-cd awesome-ecommerce-platform
+cd Coding_Hub_Ecommerce-repo
 
 # Install dependencies
-npm install
+npm install live-server
 
 # Run the application
-npm start
+live-server
 
 Visit localhost:3000 in your browser to see the
 magic happen!
 
 Contributors
 
-1. John Doe - @johndoe
+1. Samson Iweibo - https://github.com/SamsonI95
+2. Emmanuel Dike - https://github.com/emmzyrayz
+3. Taladeogo Abraham - https://github.com/TaladeogoA
 
 Feel free to contribute, report issues, or provide feedback.
 We appreciate your support! 🎉
