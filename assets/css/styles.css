@@ -10,6 +10,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* max-width: 100vw; */
+  /* overflow: hidden; */
 }
 
 .link{
@@ -27,121 +29,10 @@ header {
 }
 
 main {
-  overflow: hidden;
+   
   display: block;
 }
 
-.carousel-container img {
-  vertical-align: middle;
-}
-
-.carousel-container {
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-}
-
-.slider {
-  display: flex;
-  transition: all 0.5s;
-}
-
-.content-text {
-  position: absolute;
-  top: 45%;
-  left: 250px;
-}
-
-.content-text h3 {
-  font-family: Playfair Display;
-  font-size: 58px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 80px; /* 137.931% */
-  letter-spacing: 0.2px;
-  color: white;
-}
-
-.content-text p {
-  position: relative;
-  left: 36%;
-  width: 626px;
-  text-align: right;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px; /* 150% */
-  letter-spacing: 0.2px;
-  color: white;
-}
-
-.carousel-container button {
-  display: flex;
-  position: absolute;
-  top: 70%;
-  left: 82%;
-  padding: 15px 15px;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background: #fff;
-  border: 1px solid #fff;
-  color: rgba(229, 194, 0, 1);
-  text-align: center;
-  font-family: Inter;
-  font-size: 15px;
-  font-weight: 600;
-  font-style: normal;
-  cursor: pointer;
-}
-
-.carousel-container button:hover {
-  background-color: black;
-  border: 1px solid black;
-}
-
-.carousel-controls .arrow {
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-}
-
-.carousel-controls .arrow i {
-  font-size: 30px;
-  color: #fff;
-}
-
-.arrow.left {
-  left: 10px;
-}
-
-.arrow.right {
-  right: 10px;
-}
-
-.carousel-controls ul {
-  display: flex;
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translate(-50%);
-  list-style: none;
-}
-
-.carousel-controls ul li {
-  width: 63px;
-  height: 10px;
-  background: grey;
-  opacity: 0.2;
-  margin: 0.5px;
-  cursor: pointer;
-}
-
-.carousel-controls ul li.selected {
-  background: white;
-  opacity: 8;
-}
 
 .category-title {
   position: relative;
@@ -179,7 +70,7 @@ main {
 .category-options section {
   position: relative;
   border-radius: 10px;
-  overflow: hidden;
+   
 }
 
 .category-options > section > img {
@@ -217,12 +108,14 @@ main {
   background-position: 50%;
   background-size: cover;
   height: 500px;
+  max-width: 100vw;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  overflow: hidden;
+  border-radius: 10px;
+   
 }
 
 .essentials-tag::before {
@@ -295,7 +188,7 @@ main {
   align-items: center;
   justify-content: center;
   /* transform: translateX(5%); */
-  overflow: hidden;
+   
 }
 
 .left-panel-nav-bar {
@@ -350,7 +243,7 @@ main {
 }
 
 .nav-rect {
-  width: 100vw;
+  /* width: 100vw; */
   height: 2px;
   background: var(--light-gray-2, #ececec);
   position: relative;
@@ -360,12 +253,12 @@ main {
 .panel-carousel-container{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   gap: 5px;
 }
 
 .left-panel-carousel-container {
-  width: 52%;
+  width: 55%;
   height: 100%;
   display: block;
 }
@@ -373,12 +266,14 @@ main {
 .left-panel-carousel {
   /*border: 1px solid red;*/
   height: 800px;
-  overflow: hidden;
 }
 
 .item-carousel-container-slider {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
+  position: relative;
+  background: red;
+  overflow-y: auto;
   height: 100%;
   width: 100%;
   transition: all 0.5s;
@@ -397,29 +292,33 @@ main {
 }
 
 .right-panel-carousel-container {
-  position: absolute;
-  width: 50%;
-  margin: 10px auto;
-  left: 60%;
-  transform: translateY(-30px);
+  position: relative;
+  width: 45%;
+  /* margin: 10px auto; */
+  /* left: 60%; */
+  /* transform: translateY(-30px); */
 }
 
 .right-panel-carousel {
-  /*border: 1px solid red;*/
+  border: 1px solid red;
   height: 800px;
-  width: 56%;
-  overflow: hidden;
+  width: 100%;
+   
 }
 
 .right-item-carousel-container-slider {
   display: flex;
   height: 100%;
-  width: 130%;
+  /* width: 130%; */
   transition: all 0.5s;
 }
 
 .right-item-carousel-container-slider section {
   flex-basis: 100%;
+}
+
+.right-item-carousel-container-slider section img{
+  width: 100%;
 }
 
 .box {
@@ -469,7 +368,7 @@ main {
   margin-bottom: -10px;
   /* height: 309px; */
   width: 100%;
-  padding: 0 195px;
+  /* padding: 0 195px; */
   display: flex;
   flex-direction: row;
   flex-wrap: no-wrap;

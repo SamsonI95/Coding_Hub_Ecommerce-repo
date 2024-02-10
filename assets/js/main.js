@@ -37,7 +37,7 @@ const cancelIconM = document.getElementById("cancelIconM");
 
 searchBar.addEventListener("input", function () {
   if (searchBar.value.trim() !== "") {
-    cancelIcon.style.display = "inline-block";
+    cancelIcon.style.display = " block";
   } else {
     cancelIcon.style.display = "none";
   }
@@ -45,7 +45,7 @@ searchBar.addEventListener("input", function () {
 
 searchBarM.addEventListener("input", function () {
   if (searchBarM.value.trim() !== "") {
-    cancelIconM.style.display = "inline-block";
+    cancelIconM.style.display = " block";
   } else {
     cancelIconM.style.display = "none";
   }
@@ -75,7 +75,7 @@ magnifyingGlassM.addEventListener("click", function () {
 magnifyingGlass.addEventListener("click", function () {
   // Hide navMobileSearch, show magnifyingGlassM
   navMobileSearch.style.display = "none";
-  magnifyingGlassM.style.display = "inline-block";
+  magnifyingGlassM.style.display = " block";
 });
 
 // ---- Banner Function

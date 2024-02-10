@@ -1,17 +1,20 @@
 /* CSS code */
 
 .banner-container {
-  /* width: 100%; */
+  width: 100vw;
   display: block;
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  top: 80px !important;
   margin: 1% 10px;
+  margin-bottom: 17%;
 }
 
 @media screen and (max-width: 600px) {
   .banner-container {
-    height: 50vh;
+    height: 40vh;
+    /* width: 100vw; */
+    margin-bottom: 43%;
   }
 }
 
@@ -52,10 +55,10 @@
 
 .banner-items {
   display: flex;
-  width: 500%;
+  /* width: 500%; */
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   transition: transform 0.5s;
   z-index: -1;
@@ -76,9 +79,9 @@
 }
 
 .banner-item img{
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
